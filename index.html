@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Animacja1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+<script>
+let x, y, v;
+
+function setup() {
+    createCanvas(400, 400);
+    x = 200;
+    y = 200;
+    v = 2;
+}
+
+function draw() {
+    background(200);
+    fill(128);
+    ellipse(x, y, 50, 50);
+
+    x = x + v;
+
+    if (x > width - 25) {
+        v = -2;
+    } else if (x < 25) {
+        v = 2;
+    }
+}
+</script>
+
+</body>
+</html>
